@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import SearchField from "./components/SearchField/SearchField.js";
-import ShopList from "./components/Shops.list/Shops.list.js";
-
+import ShopList from "./components/Shops.list/Shops.list.jsx";
+import "./App.css";
 const App = () => {
   const [shops, setShops] = useState([]);
   const [search, setSearch] = useState("");
@@ -13,12 +13,12 @@ const App = () => {
       .then((json) => setShops(json));
   }, []);
 
-  // useEffect(() => {
-  //   const newFilter = shops.filter((shop) => {
-  //     return shop.title.toLocaleLowerCase().includes(search);
-  //   });
-  //   setFilter(newFilter);
-  // }, [shops, search]);
+  useEffect(() => {
+    const newFilter = shops.filter((shop) => {
+      return shop.title.toLocaleLowerCase().includes(search);
+    });
+    setFilter(newFilter);
+  }, [shops, search]);
 
   useEffect(() => {
     const newFiltere = shops.filter((shop) => {
