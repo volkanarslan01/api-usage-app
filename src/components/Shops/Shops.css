@@ -1,0 +1,28 @@
+h1 {
+  text-align: center;
+}
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+h4 {
+  color: #00ff00;
+}
+.inbox {
+  border: 1px solid #0001;
+  width: 450px;
+  padding: 10px;
+  height: 700px;
+  margin: 10px 5px 5px 5px;
+}
+img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+.price {
+  color: green;
+}

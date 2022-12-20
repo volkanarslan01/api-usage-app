@@ -1,4 +1,4 @@
-import clases from "./SearchField.scss";
+import "./SearchField.css";
 
 const SearchField = ({ onChangeHandler, className }) => {
   return <input className={className} onChange={onChangeHandler} />;
