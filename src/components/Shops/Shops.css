@@ -1,13 +1,7 @@
 h1 {
   text-align: center;
 }
-.box {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  font-size: 14px;
-}
+
 h4 {
   color: #00ff00;
 }

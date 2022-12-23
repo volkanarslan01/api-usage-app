@@ -1,7 +1,7 @@
 import Shops from "../Shops/Shops.jsx";
-import "../Shops.list/Shops.list.css";
+import "./Shops.list.css";
 const ShopsList = ({ shops }) => (
-  <div className="card-title">
+  <div className="card-list">
     {shops.map((shop) => {
       const { id } = shop;
       return <Shops shops={shop} id={id} />;
