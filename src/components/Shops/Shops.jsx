@@ -8,7 +8,7 @@ const Shops = ({ shops }) => {
       <img src={image} alt="img"></img>
       <h3>{category}</h3>
       <p>{description}</p>
-      <h4>{price}</h4>
+      <h4>{price} $</h4>
     </div>
   );
 };

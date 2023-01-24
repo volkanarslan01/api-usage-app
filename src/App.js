@@ -6,7 +6,6 @@ const App = () => {
   const [shops, setShops] = useState([]);
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState(shops);
-
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
@@ -20,16 +19,8 @@ const App = () => {
     setFilter(newFilter);
   }, [shops, search]);
 
-  useEffect(() => {
-    const newFiltere = shops.filter((shop) => {
-      return shop.title.toLocaleLowerCase().includes(search);
-    });
-    setFilter(newFiltere);
-  }, [shops, search]);
-
   const onSearchChange = (event) => {
     const search = event.target.value.toLocaleLowerCase();
-    console.log(search);
     setSearch(search);
   };
   return (
