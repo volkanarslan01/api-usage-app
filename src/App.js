@@ -7,9 +7,12 @@ const App = () => {
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState(shops);
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then((res) => res.json())
-      .then((json) => setShops(json));
+    const getShops = async () => {
+      await fetch("https://fakestoreapi.com/products")
+        .then((res) => res.json())
+        .then((json) => setShops(json));
+    };
+    getShops();
   }, []);
 
   useEffect(() => {
